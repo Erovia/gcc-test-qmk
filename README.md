@@ -44,15 +44,15 @@ Used the QMK CLI's `mass-compile` feature to run the tests, 3 for each compiler:
 
 1. Leaving it up to the keyboard/keymap if link-time optimisation ([LTO](https://en.wikipedia.org/wiki/Interprocedural_optimization)) is enabled:
 
-    qmk mass-compile -km default -j 16 -c -f 'processor=at*'`
+       qmk mass-compile -km default -j 16 -c -f 'processor=at*'
 
 2. Forcing LTO:
 
-    qmk mass-compile -km default -j 16 -c -f 'processor=at*' -e LTO_ENABLE=yes
+       qmk mass-compile -km default -j 16 -c -f 'processor=at*' -e LTO_ENABLE=yes
 
-2. Force disabling LTO:
+3. Force disabling LTO:
 
-    qmk mass-compile -km default -j 16 -c -f 'processor=at*' -e LTO_ENABLE=no
+       qmk mass-compile -km default -j 16 -c -f 'processor=at*' -e LTO_ENABLE=no
 
 After each run, I checked the sizes of each generated `.hex` files with the `ls` command and saved the output into simple text files:
 
