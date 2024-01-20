@@ -1,6 +1,10 @@
 # Testing different `avr-gcc` versions with QMK
 
-**tl;dr**: [Click HERE](https://erovia.github.io/gcc-test-qmk/avr-gcc) to view the results.
+**tl;dr**: [Click HERE](https://erovia.github.io/gcc-test-qmk/avr-gcc) to view the results.  
+
+Each row contains the sizes of the compiled firmware in bytes for each compiler tested.  
+**Green** fields are the smallest values. If more than one field has the same value, both are coloured.  
+**Red** fields mean that the compiler failed to compile the code with the specific settings. There is also a build failure counter at the bottom of each column.  
 
 ## Some background
 
@@ -65,14 +69,8 @@ Cleanup between tests:
     qmk clean -a
 
 
-## The results
 
-The data was loaded from the simple text files into LibreOffice Calc for better visualisation.  
-Each row contains the sizes in bytes for each compiler tested.  
-**Green** fields are the smallest values. If more than one field has the same value, both are coloured.  
-**Red** fields mean that the compiler failed to compile the code with the specific settings. There is also a build failure counter at the bottom of each column.  
-
-What did I learn:
+## What I learnt:
 
 - Version 13.x performs pretty good.  
 - If you want to go for the most size-optimised code possible, use 13.x with LTO enabled.  
