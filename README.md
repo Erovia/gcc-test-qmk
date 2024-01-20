@@ -1,6 +1,6 @@
 # Testing different `avr-gcc` versions with QMK
 
-**tl;dr**: [Click HERE](avr-gcc.html) or click on the `avr-gcc.html` file if you don't like clicking links.
+**tl;dr**: [Click HERE](https://erovia.github.io/gcc-test-qmk/avr-gcc) or click on the `avr-gcc.html` file if you don't like clicking links.
 
 ## Some background
 
