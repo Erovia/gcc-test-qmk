@@ -35,6 +35,8 @@ At the time of writing, this means `2366` keyboards with one of these microcontr
 * atmega32u2
 * atmega32u4
 
+All tests were done against commit `dcc47ea31b3f4ef097a2fc677bdbb9b2560d905a`.  
+The ID of the Arch container was: `69f38d8f6347`.  
 
 First, I patched out QMK's file-size sanity check. This is useful for normal usage, but I wanted to get the final `.hex` files even if they wouldn't fit the microcontroller.
 
@@ -77,3 +79,11 @@ What did I learn:
 - If you can't or don't want to use LTO, version 8.x still performs better.  
 - `avr-libc` had [new release in 2022](https://github.com/avrdudes/avr-libc/tags) that has been flying under the radar of major distros ever since. Granted has been largely dormant and the previous release/activity was in 2016.  
 - Ubuntu is still packages the absolutely ancient 5.4.0 release [from 2016](https://gcc.gnu.org/gcc-5/). Not just in LTS, but in the latest stable too (23.10). Based on devel, the next stable will have 7.3.0, [from 2018](https://gcc.gnu.org/gcc-7/), so I guess that's progress.  
+
+
+## Future ideas
+
+In a few cases Arch's 13.2.0 generated smaller, marginally but still, files than my 13.2.0 on Fedora. I suspect this might be due to some differences between `avr-libc` 2.1.0 and 2.0.0.  
+I might compile 2.1.0 for Fedora and redo the 13.2.0 tests.  
+
+Gathering data from other OS/distros would be great.  
